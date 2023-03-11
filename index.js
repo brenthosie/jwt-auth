@@ -104,6 +104,7 @@ async function authorize(options) {
     headers: form.getHeaders()
   };
 
+  console.log('local!!')
   return fetch(`${ims}/ims/exchange/jwt/`, postOptions)
     .catch(e => throwRequestFailedError(e.message))
     .then(res => {
